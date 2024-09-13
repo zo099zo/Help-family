@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar { 
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .hero {
+            background-color: #e9ecef;
+            padding: 20px;
+            text-align: center;
+        }
+        .service {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .contact {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 50px 0;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html">الرئيسية</a>
+        <a href="services.html">الخدمات</a>
+        <a href="contact.html">تواصل معنا</a>
+    </div>
+    <section id="hero" class="hero">
+        <h2>مرحبا بكم في موقعنا</h2>
+        <p>ابحث عن الخدمات المنزلية التي تحتاجها</p>
+        <input type="text" id="searchInput" placeholder="ابحث هنا...">
+        <button onclick="searchSite()">ابحث</button>
+    </section>
+
+    <section id="services" class="services">
+        <div class="service">
+            <h3>خدمة الطوارئ</h3>
+            <p>نحن هنا لمساعدتك في حالات الطوارئ.</p>
+            <a href="emergency.html"><button>اقرأ المزيد</button></a>
+        </div>
+        <div class="service">
+            <h3>الخدمات المنزلية</h3>
+            <p>احصل على الرعاية الصحية في منزلك بسهولة.</p>
+            <a href="Read.html"><button>اقرأ المزيد</button></a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h3>تواصل معنا</h3>
+        <p>لأي استفسارات، لا تتردد في الاتصال بنا.</p>
+    </section>
+
+    <script>
+        function searchSite() {
+            var query = document.getElementById('searchInput').value.toLowerCase();
+            if (query.includes('طوارئ')) {
+                window.location.href = 'emergency.html';
+            } else if (query.includes('خدمات')) {
+                window.location.href = 'services.html';
+            } else if (query.includes('تواصل')) {
+                window.location.href = 'contact.html';
+            } else {
+                alert('لم يتم العثور على نتائج مطابقة.');
+            }
+        }
+    </script>
+</body>
+</html>
+
